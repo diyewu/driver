@@ -2,7 +2,6 @@ package xz.driver.common.service;
 
 import xz.driver.common.domain.RedisInfo;
 import xz.driver.common.exception.RedisConnectException;
-import xz.driver.manager.entity.RcRegion;
 
 import java.io.IOException;
 import java.util.List;
@@ -91,7 +90,7 @@ public interface RedisService {
      * @param value
      * @return
      */
-    String setMap(String key, Map<String,String> value) throws RedisConnectException;
+    String setMap(String key, Map<String, String> value) throws RedisConnectException;
 
     /**
      * get 对象为map
@@ -107,7 +106,7 @@ public interface RedisService {
      * @param mapKey
      * @return
      */
-    boolean mapExistsKey(String key,String mapKey) throws RedisConnectException;
+    boolean mapExistsKey(String key, String mapKey) throws RedisConnectException;
 
     /**
      * 单个map值设置
@@ -116,7 +115,7 @@ public interface RedisService {
      * @param mapValue
      * @return
      */
-    Long hset(String key,String mapKey,RcRegion r) throws RedisConnectException;
+    Long hset(String key, String mapKey, RcRegion r) throws RedisConnectException;
 
     RcRegion hget(String key, String mapKey) throws RedisConnectException, IOException;
 

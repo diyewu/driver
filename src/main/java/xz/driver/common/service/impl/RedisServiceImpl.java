@@ -1,19 +1,20 @@
 package xz.driver.common.service.impl;
 
 import org.codehaus.jackson.map.ObjectMapper;
-import xz.driver.common.domain.RedisInfo;
-import xz.driver.common.function.JedisExecutor;
-import xz.driver.common.service.RedisService;
-import xz.driver.common.exception.RedisConnectException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import redis.clients.jedis.Client;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
-import xz.driver.manager.entity.RcRegion;
+import xz.research.common.domain.RedisInfo;
+import xz.research.common.exception.RedisConnectException;
+import xz.research.common.function.JedisExecutor;
+import xz.research.common.service.RedisService;
+import xz.research.manager.entity.RcRegion;
 
 import java.io.IOException;
 import java.util.*;
+
 /**
  * Redis 工具类，只封装了几个常用的 redis 命令，
  * 可根据实际需要按类似的方式扩展即可。
